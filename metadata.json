@@ -1,0 +1,6 @@
+{
+  "name": "Abdul Business",
+  "description": "Plateforme moderne de services télécoms, recharges de crédit, forfaits Internet et accessoires à Niamey avec confirmation WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
