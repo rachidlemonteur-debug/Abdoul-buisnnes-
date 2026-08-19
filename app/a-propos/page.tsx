@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ShieldCheck, HeartHandshake, Zap, MapPin, CheckCircle, ArrowRight } from 'lucide-react';
+import { ShieldCheck, HeartHandshake, Zap, MapPin, CheckCircle, ArrowRight, ArrowLeft } from 'lucide-react';
 import { BUSINESS_CONFIG } from '@/lib/constants';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
 import { ScrollReveal } from '@/components/ScrollReveal';
@@ -29,8 +29,20 @@ export default function AProposPage() {
 
   return (
     <div className="flex flex-col min-h-screen bg-[#f8f9fa] text-[#1a1a1a] pt-20">
+      {/* Breadcrumbs Navigation */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-10 pt-4 w-full">
+        <nav aria-label="Fil d'Ariane" className="flex items-center gap-2 text-xs text-gray-500 font-semibold uppercase tracking-wider">
+          <Link href="/" className="hover:text-black transition-colors flex items-center gap-1">
+            <ArrowLeft className="h-3.5 w-3.5" />
+            <span>Accueil</span>
+          </Link>
+          <span>/</span>
+          <span className="text-black">À Propos</span>
+        </nav>
+      </div>
+
       {/* Header Hero Banner - Bento Style */}
-      <section className="pt-8 pb-4 px-4 sm:px-8 lg:px-10 max-w-7xl mx-auto w-full">
+      <section className="pt-4 pb-4 px-4 sm:px-8 lg:px-10 max-w-7xl mx-auto w-full">
         <div className="rounded-[2.5rem] bg-white border border-gray-200/90 p-8 sm:p-12 shadow-xs text-center">
           <div className="inline-block px-3 py-1 bg-black text-white text-[10px] uppercase font-bold tracking-widest rounded-full mb-3 shadow-xs">
             Notre Histoire
@@ -47,7 +59,7 @@ export default function AProposPage() {
       </section>
 
       {/* Main Narrative - Bento Grid */}
-      <section className="py-8 px-4 sm:px-8 lg:px-10 max-w-7xl mx-auto w-full">
+      <section className="py-6 px-4 sm:px-8 lg:px-10 max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           {/* Story Narrative Card */}
           <div className="lg:col-span-7 rounded-[2.5rem] bg-white border border-gray-200/90 p-8 sm:p-12 shadow-xs flex flex-col justify-between">
@@ -86,17 +98,17 @@ export default function AProposPage() {
             </div>
           </div>
 
-          {/* Side Image Card */}
-          <div className="lg:col-span-5 relative min-h-[300px] lg:min-h-full rounded-[2.5rem] overflow-hidden border border-gray-200/90 bg-gray-100 shadow-xs">
+          {/* Side Image Card - High Quality Authentic Photo */}
+          <div className="lg:col-span-5 relative min-h-[320px] lg:min-h-full rounded-[2.5rem] overflow-hidden border border-gray-200/90 bg-gray-100 shadow-xs">
             <Image
-              src="https://picsum.photos/seed/abdulabout/800/1000"
+              src="https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?w=800&auto=format&fit=crop&q=80"
               alt="Services télécoms Abdul Business à Niamey Niger"
               fill
               sizes="(max-width: 1024px) 100vw, 40vw"
               referrerPolicy="no-referrer"
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-8 text-white">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-8 text-white">
               <span className="text-[10px] font-bold uppercase tracking-widest text-orange-300 mb-1">
                 Ancrage Local
               </span>
@@ -109,7 +121,7 @@ export default function AProposPage() {
       </section>
 
       {/* Core Values Bento Grid */}
-      <section className="py-8 px-4 sm:px-8 lg:px-10 max-w-7xl mx-auto w-full mb-8">
+      <section className="py-6 px-4 sm:px-8 lg:px-10 max-w-7xl mx-auto w-full mb-8">
         <div className="rounded-[2.5rem] bg-white border border-gray-200/90 p-8 sm:p-12 shadow-xs">
           <div className="text-center max-w-2xl mx-auto mb-10">
             <div className="inline-block px-3 py-1 bg-black text-white text-[10px] uppercase font-bold tracking-widest rounded-full mb-3 shadow-xs">

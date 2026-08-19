@@ -2,7 +2,7 @@
 
 import React, { useRef, useState } from 'react';
 import Image from 'next/image';
-import { ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { WhatsAppButton } from './WhatsAppButton';
 
 interface StorySlide {
@@ -27,8 +27,8 @@ export function StoryCarousel() {
       label: 'Continuité Télécom',
       title: 'Toujours connecté, partout à Niamey',
       description: 'Recharges de crédit et forfaits Internet sans parcours compliqué. Ne restez plus bloqué faute d’unités lors d’un appel important ou d’une session WhatsApp.',
-      image: 'https://picsum.photos/seed/connectstory/800/600',
-      imageAlt: 'Utilisateur restant connecté avec son smartphone à Niamey',
+      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&auto=format&fit=crop&q=80',
+      imageAlt: 'Utilisateur connecté avec son smartphone à Niamey',
       whatsappMessage: 'Bonjour Abdul Business, je souhaite faire une recharge de crédit rapide.',
       ctaText: 'Faire une recharge',
       highlight: 'Zéro interruption',
@@ -38,8 +38,8 @@ export function StoryCarousel() {
       label: 'Proximité Locale',
       title: 'Pensé pour Niamey & le Niger',
       description: 'Un service de proximité clair et accessible, adapté aux réalités des réseaux Airtel, Moov et Zamani ainsi qu’aux solutions Mobile Money locales.',
-      image: 'https://picsum.photos/seed/niameyurban/800/600',
-      imageAlt: 'Vue de la ville de Niamey et commerce local de connectivité',
+      image: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&auto=format&fit=crop&q=80',
+      imageAlt: 'Commerce et connectivité mobile au Niger',
       whatsappMessage: 'Bonjour Abdul Business, je souhaite me renseigner sur vos services à Niamey.',
       ctaText: 'Nous contacter',
       highlight: '100% Niamey',
@@ -49,7 +49,7 @@ export function StoryCarousel() {
       label: 'Sécurité & Transparence',
       title: 'Paiement confirmé avant exécution',
       description: 'Le montant exact, le numéro bénéficiaire et le moyen de paiement sont confirmés ensemble avant que vous ne versiez le moindre franc.',
-      image: 'https://picsum.photos/seed/securepaystory/800/600',
+      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&auto=format&fit=crop&q=80',
       imageAlt: 'Paiement mobile sécurisé par vérification WhatsApp',
       whatsappMessage: 'Bonjour Abdul Business, je voudrais connaître la procédure de paiement sécurisée.',
       ctaText: 'Vérifier la procédure',
@@ -60,8 +60,8 @@ export function StoryCarousel() {
       label: 'Écoute & Disponibilité',
       title: 'Une vraie assistance humaine sur WhatsApp',
       description: 'Pas de robot impersonnel. Vous échangez directement avec un conseiller dédié qui suit votre demande pas à pas jusqu’à la réception du crédit.',
-      image: 'https://picsum.photos/seed/humansupport/800/600',
-      imageAlt: 'Assistance client humaine et chaleureuse sur WhatsApp',
+      image: 'https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=800&auto=format&fit=crop&q=80',
+      imageAlt: 'Assistance client humaine et personnalisée sur WhatsApp',
       whatsappMessage: 'Bonjour Abdul Business, j’ai besoin d’une assistance personnalisée.',
       ctaText: 'Parler à un conseiller',
       highlight: 'Assistance dédiée',
@@ -71,8 +71,10 @@ export function StoryCarousel() {
   const handleScroll = () => {
     if (!scrollContainerRef.current) return;
     const { scrollLeft, clientWidth } = scrollContainerRef.current;
-    const index = Math.round(scrollLeft / clientWidth);
-    setActiveIndex(index);
+    if (clientWidth > 0) {
+      const index = Math.round(scrollLeft / clientWidth);
+      setActiveIndex(index);
+    }
   };
 
   const scrollToSlide = (index: number) => {
@@ -95,7 +97,7 @@ export function StoryCarousel() {
   };
 
   return (
-    <section id="storytelling-carousel-section" className="py-12 px-4 sm:px-8 lg:px-10 max-w-7xl mx-auto">
+    <section id="storytelling-carousel-section" className="py-10 px-4 sm:px-8 lg:px-10 max-w-7xl mx-auto">
       <div className="rounded-[2.5rem] bg-white border border-gray-200/90 p-6 sm:p-10 shadow-xs">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">

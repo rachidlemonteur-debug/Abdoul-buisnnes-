@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import {
   PhoneCall,
   MapPin,
@@ -11,6 +12,7 @@ import {
   ShieldCheck,
   Send,
   Sparkles,
+  ArrowLeft,
 } from 'lucide-react';
 import { BUSINESS_CONFIG, FAQ_ITEMS, buildWhatsAppLink } from '@/lib/constants';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
@@ -20,7 +22,7 @@ export default function ContactPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [contactName, setContactName] = useState('');
   const [contactPhone, setContactPhone] = useState('');
-  const [contactService, setContactService] = useState('recharge');
+  const [contactService, setContactService] = useState('Recharge de crédit');
   const [contactMessage, setContactMessage] = useState('');
 
   const toggleFaq = (index: number) => {
@@ -38,8 +40,20 @@ Je vous contacte depuis le site web :
 
   return (
     <div className="flex flex-col min-h-screen bg-[#f8f9fa] text-[#1a1a1a] pt-20">
+      {/* Breadcrumbs */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-10 pt-4 w-full">
+        <nav aria-label="Fil d'Ariane" className="flex items-center gap-2 text-xs text-gray-500 font-semibold uppercase tracking-wider">
+          <Link href="/" className="hover:text-black transition-colors flex items-center gap-1">
+            <ArrowLeft className="h-3.5 w-3.5" />
+            <span>Accueil</span>
+          </Link>
+          <span>/</span>
+          <span className="text-black">Contact &amp; FAQ</span>
+        </nav>
+      </div>
+
       {/* Header Banner - Bento Hero Card */}
-      <section className="pt-8 pb-4 px-4 sm:px-8 lg:px-10 max-w-7xl mx-auto w-full">
+      <section className="pt-4 pb-4 px-4 sm:px-8 lg:px-10 max-w-7xl mx-auto w-full">
         <div className="rounded-[2.5rem] bg-white border border-gray-200/90 p-8 sm:p-12 shadow-xs text-center">
           <div className="inline-block px-3 py-1 bg-black text-white text-[10px] uppercase font-bold tracking-widest rounded-full mb-3 shadow-xs">
             Contact &amp; Assistance
@@ -56,7 +70,7 @@ Je vous contacte depuis le site web :
       </section>
 
       {/* Main Content: Bento Grid Contact & Form */}
-      <section className="py-8 px-4 sm:px-8 lg:px-10 max-w-7xl mx-auto w-full">
+      <section className="py-6 px-4 sm:px-8 lg:px-10 max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           {/* Left Column: Direct Info Cards (Bento style) */}
           <div className="lg:col-span-5 space-y-4">
@@ -223,7 +237,7 @@ Je vous contacte depuis le site web :
       </section>
 
       {/* FAQ Accordion Section - Bento Style */}
-      <section id="faq-section" className="py-12 px-4 sm:px-8 lg:px-10 max-w-7xl mx-auto w-full mb-8">
+      <section id="faq-section" className="py-8 px-4 sm:px-8 lg:px-10 max-w-7xl mx-auto w-full mb-8">
         <div className="rounded-[2.5rem] bg-white border border-gray-200/90 p-8 sm:p-12 shadow-xs">
           <div className="text-center max-w-2xl mx-auto mb-10">
             <div className="inline-block px-3 py-1 bg-black text-white text-[10px] uppercase font-bold tracking-widest rounded-full mb-3 shadow-xs">

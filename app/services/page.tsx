@@ -8,6 +8,7 @@ import {
   ShieldCheck,
   PhoneCall,
   ArrowRight,
+  ArrowLeft,
   CheckCircle,
   HelpCircle,
   Clock,
@@ -48,8 +49,20 @@ export default function ServicesPage() {
 
   return (
     <div className="flex flex-col min-h-screen bg-[#f8f9fa] text-[#1a1a1a] pt-20">
+      {/* Breadcrumbs */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-10 pt-4 w-full">
+        <nav aria-label="Fil d'Ariane" className="flex items-center gap-2 text-xs text-gray-500 font-semibold uppercase tracking-wider">
+          <Link href="/" className="hover:text-black transition-colors flex items-center gap-1">
+            <ArrowLeft className="h-3.5 w-3.5" />
+            <span>Accueil</span>
+          </Link>
+          <span>/</span>
+          <span className="text-black">Services Télécoms</span>
+        </nav>
+      </div>
+
       {/* Header Banner - Bento Hero Card */}
-      <section className="pt-8 pb-4 px-4 sm:px-8 lg:px-10 max-w-7xl mx-auto w-full">
+      <section className="pt-4 pb-4 px-4 sm:px-8 lg:px-10 max-w-7xl mx-auto w-full">
         <div className="rounded-[2.5rem] bg-white border border-gray-200/90 p-8 sm:p-12 shadow-xs text-center">
           <div className="inline-block px-3 py-1 bg-black text-white text-[10px] uppercase font-bold tracking-widest rounded-full mb-3 shadow-xs">
             Catalogue Télécom
@@ -111,7 +124,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Main Interactive Content */}
-      <section className="py-8 px-4 sm:px-8 lg:px-10 max-w-7xl mx-auto w-full">
+      <section className="py-6 px-4 sm:px-8 lg:px-10 max-w-7xl mx-auto w-full">
         <div className="mx-auto max-w-5xl">
           {activeTab === 'recharge' && (
             <ScrollReveal direction="up">
@@ -154,7 +167,7 @@ export default function ServicesPage() {
       </section>
 
       {/* How it works (Processus en 4 étapes) - Bento Grid */}
-      <section className="py-12 px-4 sm:px-8 lg:px-10 max-w-7xl mx-auto w-full">
+      <section className="py-8 px-4 sm:px-8 lg:px-10 max-w-7xl mx-auto w-full mb-8">
         <div className="rounded-[2.5rem] bg-white border border-gray-200/90 p-8 sm:p-12 shadow-xs">
           <div className="text-center max-w-2xl mx-auto mb-10">
             <div className="inline-block px-3 py-1 bg-black text-white text-[10px] uppercase font-bold tracking-widest rounded-full mb-3 shadow-xs">

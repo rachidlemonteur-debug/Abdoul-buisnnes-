@@ -3,6 +3,7 @@
 import React from 'react';
 import { Zap, Wifi, WalletCards, Users } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
+import { Card3D } from './Card3D';
 
 export function TrustBanner() {
   const pillars = [
@@ -45,31 +46,33 @@ export function TrustBanner() {
             <ScrollReveal
               key={pillar.title}
               delay={index * 70}
-              direction="up"
+              variant="3d-card"
               className="h-full"
             >
-              <div className="group h-full rounded-[2rem] border border-gray-200/90 bg-white p-7 shadow-xs transition-all duration-300 hover:shadow-md hover:-translate-y-1 hover:border-gray-300 flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center font-bold text-xs">
-                      <Icon className="h-4 w-4" />
+              <Card3D maxTilt={6} perspective={1000} className="h-full">
+                <div className="group h-full rounded-[2rem] border border-gray-200/90 bg-white p-7 shadow-xs transition-shadow duration-300 hover:shadow-xl hover:border-gray-300 flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center font-bold text-xs shadow-2xs">
+                        <Icon className="h-4 w-4" />
+                      </div>
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400">
+                        Pilier {pillar.badgeNumber}
+                      </span>
                     </div>
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400">
-                      Pilier {pillar.badgeNumber}
-                    </span>
-                  </div>
 
-                  <h3 className="text-base font-bold text-black group-hover:text-[#F97316] transition-colors leading-snug">
-                    {pillar.title}
-                  </h3>
-                  <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-orange-600 mb-2">
-                    {pillar.subtitle}
-                  </span>
-                  <p className="text-xs text-gray-500 leading-relaxed">
-                    {pillar.desc}
-                  </p>
+                    <h3 className="text-base font-bold text-black group-hover:text-[#F97316] transition-colors leading-snug">
+                      {pillar.title}
+                    </h3>
+                    <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-orange-600 mb-2">
+                      {pillar.subtitle}
+                    </span>
+                    <p className="text-xs text-gray-500 leading-relaxed">
+                      {pillar.desc}
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </Card3D>
             </ScrollReveal>
           );
         })}

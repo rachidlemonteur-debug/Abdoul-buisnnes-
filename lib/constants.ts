@@ -243,7 +243,7 @@ export const BOUTIQUE_PRODUCTS: AccessoryProduct[] = [
     specs: ["Longueur 1m / 1.5m", "Gaine nylon anti-torsion", "Support charge rapide"],
     inStock: true,
     priceNote: "Prix unitaire confirmé sur WhatsApp selon longueur",
-    image: "https://picsum.photos/seed/usbcable/600/450",
+    image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=80",
     badge: "Top Vente",
   },
   {
@@ -254,7 +254,7 @@ export const BOUTIQUE_PRODUCTS: AccessoryProduct[] = [
     specs: ["Haute compatibilité iOS", "Connecteur renforcé", "Transfert de données stable"],
     inStock: true,
     priceNote: "Prix confirmé sur WhatsApp",
-    image: "https://picsum.photos/seed/lightningcable/600/450",
+    image: "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=800&auto=format&fit=crop&q=80",
     badge: "Indispensable",
   },
   {
@@ -265,7 +265,7 @@ export const BOUTIQUE_PRODUCTS: AccessoryProduct[] = [
     specs: ["Sortie USB-A + USB-C", "Protection anti-chauffe", "Prise européenne standard"],
     inStock: true,
     priceNote: "Tarif communiqué selon wattage (18W / 30W)",
-    image: "https://picsum.photos/seed/wallcharger/600/450",
+    image: "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=800&auto=format&fit=crop&q=80",
     badge: "Sécurité Garantie",
   },
   {
@@ -276,7 +276,7 @@ export const BOUTIQUE_PRODUCTS: AccessoryProduct[] = [
     specs: ["Format ultra-compact métallique", "Plug & play sans pilote", "Large compatibilité"],
     inStock: true,
     priceNote: "Petit prix abordable",
-    image: "https://picsum.photos/seed/otgadapter/600/450",
+    image: "https://images.unsplash.com/photo-1622445262464-84b1456045b6?w=800&auto=format&fit=crop&q=80",
     badge: "Pratique",
   },
   {
@@ -287,7 +287,7 @@ export const BOUTIQUE_PRODUCTS: AccessoryProduct[] = [
     specs: ["Microphone anti-bruit ambiant", "Embouts confortables", "Prise jack 3.5mm ou Type-C"],
     inStock: true,
     priceNote: "Disponible en stock à Niamey",
-    image: "https://picsum.photos/seed/earphones/600/450",
+    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=80",
     badge: "Qualité Audio",
   },
   {
@@ -298,7 +298,7 @@ export const BOUTIQUE_PRODUCTS: AccessoryProduct[] = [
     specs: ["Aimants néodyme puissants", "Rotation 360°", "Plaques adhésives fournies"],
     inStock: true,
     priceNote: "Stock limité - réservation WhatsApp",
-    image: "https://picsum.photos/seed/phoneholder/600/450",
+    image: "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=800&auto=format&fit=crop&q=80",
     badge: "Accessoire Auto",
   },
 ];
