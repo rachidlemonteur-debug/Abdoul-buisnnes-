@@ -101,7 +101,7 @@ export default function AProposPage() {
           {/* Side Image Card - High Quality Authentic Photo */}
           <div className="lg:col-span-5 relative min-h-[320px] lg:min-h-full rounded-[2.5rem] overflow-hidden border border-gray-200/90 bg-gray-100 shadow-xs">
             <Image
-              src="https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?w=800&auto=format&fit=crop&q=80"
+              src="/images/hero-telecom.jpg"
               alt="Services télécoms Abdul Business à Niamey Niger"
               fill
               sizes="(max-width: 1024px) 100vw, 40vw"
